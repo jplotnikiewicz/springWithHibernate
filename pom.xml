@@ -6,6 +6,7 @@
 
     <groupId>springHibernate</groupId>
     <artifactId>springHibernate</artifactId>
+    <packaging>war</packaging>
     <version>1.0-SNAPSHOT</version>
 
     <properties>
@@ -13,6 +14,13 @@
         <hibernate.version> 5.1.7.Final</hibernate.version>
         <mysql.connector.version> 5.1.40 </mysql.connector.version>
     </properties>
+
+    <parent>
+        <groupId>org.springframework.boot</groupId>
+        <artifactId>spring-boot-starter-parent</artifactId>
+        <version>2.0.2.RELEASE</version>
+    </parent>
+
     <dependencies>
 
         <!-- Apache Common Logging API -->
@@ -73,7 +81,7 @@
         <!-- Servlet+JSP+JSTL -->
         <dependency>
             <groupId>javax.servlet</groupId>
-            <artifactId>java.servlet-api</artifactId>
+            <artifactId>javax.servlet-api</artifactId>
             <version>3.1.0</version>
         </dependency>
         <dependency>
@@ -86,5 +94,41 @@
             <artifactId>jstl</artifactId>
             <version>1.2</version>
         </dependency>
+
+        <!-- Aspects part4 -->
+
+        <dependency>
+            <groupId>org.aspectj</groupId>
+            <artifactId>aspectjweaver</artifactId>
+            <version>1.8.10</version>
+        </dependency>
     </dependencies>
+
+
+    <build>
+        <pluginManagement>
+            <plugins>
+                <plugin>
+                    <groupId>org.apache.maven.plugins</groupId>
+                    <artifactId>maven-war-plugin</artifactId>
+                    <version>3.0.0</version>
+                    <configuration>
+                        <warSourceDirectory>WEB-INF</warSourceDirectory>
+                    </configuration>
+                </plugin>
+            </plugins>
+        </pluginManagement>
+        <plugins>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-compiler-plugin</artifactId>
+                <configuration>
+                    <source>1.8</source>
+                    <target>1.8</target>
+                </configuration>
+            </plugin>
+        </plugins>
+        <finalName>test</finalName>
+    </build>
+
 </project>

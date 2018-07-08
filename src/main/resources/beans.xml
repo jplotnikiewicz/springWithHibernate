@@ -11,20 +11,18 @@
 	http://www.springframework.org/schema/aop
 	http://www.springframework.org/schema/aop/spring-aop-3.0.xsd ">
 
-    <aop:aspectj-autoproxy/>
-
     <aop:config>
         <!-- Aspect -->
-        <aop:aspect id="loggingAspect" ref="part4.Logging">
+        <aop:aspect id="loggingAspect" ref="logging">
 
             <!-- Pointcut -->
-            <aop:pointcut id="UserAllMethods" expression="execution(* User.*(..))"/>
+            <aop:pointcut id="UserAllMethods" expression="execution(* part4.User.*(..))"/>
 
-            <!--Advice(s)-->
+            <!-- Advice(s) -->
             <aop:before pointcut-ref="UserAllMethods" method="beforeAdvice"/>
-            <!--<aop:after pointcut-ref="UserAllMethods" method="part4.Logging.afterAdvice"></aop:after>-->
-            <!--<aop:after-returning pointcut-ref="UserAllMethods" returning="retVal" method="part4.Logging.afterReturningAdvice"></aop:after-returning>-->
-            <!--<aop:after-throwing pointcut-ref="UserAllMethods" throwing="ex" method="part4.Logging.afterThrowingAdvice"></aop:after-throwing>-->
+            <aop:after  pointcut-ref="UserAllMethods" method="afterAdvice"/>
+            <aop:after-returning pointcut-ref="UserAllMethods" returning="retVal" method="afterReturningAdvice"/>
+            <aop:after-throwing  pointcut-ref="UserAllMethods" throwing="ex" method="afterThrowingAdvice"/>
         </aop:aspect>
     </aop:config>
 

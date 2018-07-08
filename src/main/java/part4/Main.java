@@ -1,18 +1,15 @@
-package part4;
-
-import org.springframework.context.ApplicationContext;
-import org.springframework.context.support.ClassPathXmlApplicationContext;
-
-public class Main {
-
-    public static void main (String ... args){
-        ApplicationContext context = new ClassPathXmlApplicationContext("beans.xml");
+//package part4;
 //
-//        User user  = (User) context.getBean("user");
-//        user.getName();
-//        user.printThrowException();
-
-
-    }
-
-}
+//import org.springframework.context.ApplicationContext;
+//import org.springframework.context.support.ClassPathXmlApplicationContext;
+//
+//
+//public class Main {
+//
+//    public static void main (String ... args){
+//        ApplicationContext context = new ClassPathXmlApplicationContext("spring-mvc-demo-servlet.xml");
+//
+//
+//    }
+//
+//}
