@@ -9,16 +9,9 @@ import org.springframework.web.bind.annotation.RequestMethod;
 @RequestMapping("/")
 public class WelcomeController {
 
-    @RequestMapping(value = "/", method =  RequestMethod.GET)
+    @RequestMapping(value = "/", method = RequestMethod.GET)
     public String welcome(Model model){
-        model.addAttribute("message", "Helllo Sprng MVC Framework");
+        model.addAttribute("message", "Hello Spring MVC Framework!");
         return "welcome-page";
     }
-
-//    @RequestMapping(value = "/profile", method = RequestMethod.GET)
-//    public String profile(Model model){
-//
-//        return "abc";
-//    }
-
 }
