@@ -83,13 +83,14 @@
             <groupId>javax.servlet.jsp</groupId>
             <artifactId>javax.servlet.jsp-api</artifactId>
             <version>2.3.1</version>
+            <scope>provided</scope>
         </dependency>
         <dependency>
             <groupId>javax.servlet</groupId>
             <artifactId>jstl</artifactId>
             <version>1.2</version>
+            <scope>provided</scope>
         </dependency>
-
         <!-- Aspects part4 -->
 
         <dependency>
@@ -119,7 +120,7 @@
                 <artifactId>tomcat7-maven-plugin</artifactId>
                 <version>2.2</version>
                 <configuration>
-                    <url>http://localhost:9090/springHibernate/</url>
+                    <url>http://localhost:8080/springHibernate/</url>
                     <server>TomcatServer</server>
                     <username>admin</username>
                     <password>admin</password>

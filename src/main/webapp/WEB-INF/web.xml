@@ -9,7 +9,6 @@
     <!-- Spring MVC congifs -->
 
     <welcome-file-list>
-        <welcome-file>index.jsp</welcome-file>
         <welcome-file>welcome-page.jsp</welcome-file>
     </welcome-file-list>
 
