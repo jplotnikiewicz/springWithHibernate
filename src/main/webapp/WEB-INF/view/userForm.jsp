@@ -8,6 +8,7 @@
         <form:form action="addUser" modelAttribute="user" method="POST">
             <form:label path="name">Name</form:label>
             <form:input path="name" /> <br><br>
+            <form:errors path="name" cssClass="error" /><br><br>
 
             <form:label path="id">Id</form:label>
             <form:input path="id" />
